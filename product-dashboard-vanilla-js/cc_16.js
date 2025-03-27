@@ -25,7 +25,7 @@ async function fetchProductsAsync() {
 
 // Task4- Display the Products
 function displayProducts(products) {
-    const container = document.getElementById('product=container');
+    const container = document.getElementById('product-container');
     container.innerHTML = '';
     products.slice(0, 5).forEach(product => {
         const fields = product.fields;
