@@ -1,6 +1,7 @@
 // Task2- Fetch Products with .then()
+const BASE_URL = 'https://www.course-api.com/javascript-store-products';
 function fetchProductsThen() {
-    fetch('https://www.course-api.com/javascript-store-products') // Getting product data from API
+    fetch(BASE_URL) // Getting product data from API
     .then(response => response.json()) // Turniing response into data
     .then(products => {
         products.forEach(product => {
@@ -15,7 +16,7 @@ function fetchProductsThen() {
 // Task3- Fetch Products with async/await
 async function fetchProductsAsync() {
     try { // To get and show products
-        const response = await fetch('https://www.course-api.com/javascript-store-products');
+        const response = await fetch(BASE_URL);
         const products = await response.json();
         displayProducts(products); // Displaying products on the page
     } catch (error) { // Catching errors
